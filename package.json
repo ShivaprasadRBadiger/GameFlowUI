@@ -1,0 +1,31 @@
+{
+    "name": "com.srb.gameflowui",
+    "displayName": "GameFlowUI",
+    "version": "1.0.0",
+    "unity": "2021.3",
+    "description": "A UI system for building graphs and navigating views with popups and widgets.",
+    "author": {
+        "name": "Shivaprasad R Badiger",
+        "email": "shivaprasadrbadiger@gmail.com"
+    },
+    "keywords": [
+        "UI",
+        "graph",
+        "navigation",
+        "popups",
+        "widgets",
+        "unity",
+        "ugui",
+    ],
+    "dependencies": {
+        "com.srb.simpledi": "https://github.com/ShivaprasadRBadiger/SimpleDI.git#1.0.0",
+    },
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ShivaprasadRBadiger/GameFlowUI.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ShivaprasadRBadiger/GameFlowUI/issues"
+    }
+}
