@@ -19,8 +19,8 @@ public class BootStrap : MonoBehaviour
 	}
 	private async void Start()
 	{
-		_flowController = GetFlowController<TestView1>();
-		await _flowController.Initialize<TestView1>();
+		_flowController = GetFlowController<HomeView>();
+		await _flowController.Initialize<HomeView>();
 	}
 
 
@@ -29,7 +29,7 @@ public class BootStrap : MonoBehaviour
 		var canvasProvider = SimpleDI.Default.GetInstance<IGFUICanvasProvider>();
 		var viewsProvider = SimpleDI.Default.GetInstance<IGFUIViewsProvider>();
 		return new GFUIGraphBuilder()
-			.AddLink<TestView1, TestView2>()
+			.AddLink<HomeView, TestView2>()
 			.Build(canvasProvider,viewsProvider);
 	}
 

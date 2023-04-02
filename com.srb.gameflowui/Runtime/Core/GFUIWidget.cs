@@ -8,9 +8,9 @@ namespace GameFlowUI.Core
 	public abstract class GFUIWidget: GFUIElement
 	{
 		[SerializeField]
-		private List<GFUIWidget> _serializedWidgets;
-		private IGFUIWidgetsProvider _widgetProvider;
-		private Dictionary<Type, GFUIWidget> _childWidgets;
+		protected List<GFUIWidget> _serializedWidgets;
+		protected IGFUIWidgetsProvider _widgetProvider;
+		protected Dictionary<Type, GFUIWidget> _childWidgets;
 
 		public override void Initialize()
 		{
@@ -34,9 +34,7 @@ namespace GameFlowUI.Core
 		private void InitializeChildren()
 		{
 			foreach (var widget in _childWidgets)
-			{
 				widget.Value.Initialize();
-			}
 		}
 		private void LoadSerializedWidgets()
 		{

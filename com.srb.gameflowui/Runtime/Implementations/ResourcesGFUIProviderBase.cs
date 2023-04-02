@@ -14,6 +14,11 @@ public abstract class ResourcesGFUIProviderBase
 		var prefabName = type.Name;
 		var prefabPath = $"{root}/{prefabName}";
 		var prefab = Resources.Load<GameObject>(prefabPath);
+		if(prefab is null)
+		{
+			Debug.LogError($"Unable to find prefab at {prefabPath}");
+			return default;
+		}
 		var component = prefab.GetComponent(type);
 		if (component is null)
 			Debug.LogError($"Could not find component {prefabName} in at path {prefabPath}");
